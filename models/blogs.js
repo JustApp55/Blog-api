@@ -4,9 +4,12 @@ const blogSchema = new mongoose.Schema(
     {
         title: String,
         author: String,
+        image: String,
         createdAt: Date,
         body: String,
-        comments: {name: String, message: String, date: Date}
+        comments: [{
+            name: String, message: String, date: Date
+        }]
     }
 )
 
